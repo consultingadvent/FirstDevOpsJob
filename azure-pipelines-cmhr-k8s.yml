@@ -22,6 +22,6 @@ steps:
     provider: 'aws'
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/aws/kubernetes'
-    backendServiceAWS: 'aws-terraform-junio'
+    backendServiceAWS: 'aws-terraform-cmhr'
     backendAWSBucketName: 'terreform-backend-aforo255-cmhra'
     backendAWSKey: 'kubernetes-dev.tfstate'
