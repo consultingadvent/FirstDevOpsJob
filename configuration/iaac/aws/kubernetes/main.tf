@@ -29,9 +29,9 @@ provider "kubernetes" {
  // version                = "~> 1.9"
 }
 
-module "aforo255-cluster8" {
+module "aforo255-cluster9" {
   source          = "terraform-aws-modules/eks/aws"
-  cluster_name    = "aforo255-cluster8"
+  cluster_name    = "aforo255-cluster9"
   cluster_version = "1.17"
   subnets         = ["subnet-7f3d2532", "subnet-2e010320"]  #CHANGE # Donot choose subnet from us-east-1e
   #subnets = data.aws_subnet_ids.subnets.ids
@@ -49,11 +49,11 @@ module "aforo255-cluster8" {
 }
 
 data "aws_eks_cluster" "cluster" {
-  name = module.aforo255-cluster8.cluster_id
+  name = module.aforo255-cluster9.cluster_id
 }
 
 data "aws_eks_cluster_auth" "cluster" {
-  name = module.aforo255-cluster8.cluster_id
+  name = module.aforo255-cluster9.cluster_id
 }
 
 
